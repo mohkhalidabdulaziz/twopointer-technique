@@ -7,10 +7,12 @@ public class ThreeSum {
         find3Sum(arr,target);
     }
     public static void find3Sum(int[] arr, int target) {
-        Arrays.sort(arr);
-        boolean found = false;
+        Arrays.sort(arr); // not required if the input is sorted
         int n = arr.length;
+
+        // used for loop to fix the first element
         for (int i = 0; i < n; i++) {
+            // convert the problem into 2Sum
             int low = i+1;
             int high = n-1;
             while(low < high) {
